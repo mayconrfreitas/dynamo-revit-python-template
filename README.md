@@ -9,20 +9,21 @@ The intention is to provide a foundational script that can be adapted and expand
 
 ## Configuration of Python Template in Dynamo for Revit
 
-1. **Locate DynamoSettings.xml File**: Navigate to `%appdata%\Dynamo\Dynamo Core\{version}\`. 
-2. **Edit Template Path**: Add or modify the `<PythonTemplateFilePath>` line in the `DynamoSettings.xml` file to:
+1. Download the latest [release (clicking here)](https://github.com/mayconrfreitas/dynamo-revit-python-template/releases) and find the `PythonTemplate.py` file.
+2. **Locate DynamoSettings.xml File**: Navigate to `%appdata%\Dynamo\Dynamo Revit\` and open the desired version. 
+3. **Edit Template Path**: Add or modify the `<PythonTemplateFilePath>` line in the `DynamoSettings.xml` file to:
    ```xml
    <PythonTemplateFilePath>
-      <string>C:\Users\CURRENTUSER\AppData\Roaming\Dynamo\Dynamo Core\2.0\PythonTemplate.py</string>
+      <string>C:\Users\{CURRENTUSER}\AppData\Roaming\Dynamo\Dynamo Revit\{VERSION}\PythonTemplate.py</string>
    </PythonTemplateFilePath>
    ```
 
 
-	***Replace `CURRENTUSER` with your windows username.***
+	***Replace `{CURRENTUSER}` with your windows username and `{VERSION}` with your dynamo current version.***
 
 <br>
 
-3. **Create and Save the Template**: Build a Python script with the desired functionality and save it as `PythonTemplate.py` in the `APPDATA location.
+4. **Add Template File**: Copy and paste the `PythonTemplate.py` file in the same location specified in the step #3.
 
 ## Best Practices
 - **Documentation**: Comment your code generously. Explain what each major block or function does, especially if the logic is complex.
