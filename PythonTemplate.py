@@ -70,9 +70,11 @@ from System.Collections.Generic import List
 
 clr.AddReference('System.Windows.Forms')
 from System.Windows.Forms import *
+from System.Windows.Forms import Application, Form, ProgressBar, ProgressBarStyle
 
 clr.AddReference("System.Drawing")
 from System.Drawing import *
+from System.Drawing import Size, Point
 
 #clr.AddReference("System.Data")
 #from System.Data import *
