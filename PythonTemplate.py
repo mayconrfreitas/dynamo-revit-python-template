@@ -97,7 +97,7 @@ uidoc = uiapp.ActiveUIDocument
 ### Classes ###
 
 # class ProgressBarForm(Form):
-# 	def __init__(self, max_val, title = "Progress"):
+# 	def __init__(self, max_val = 100, title = "Progress"):
 # 		self.title = title
 # 		self.max_val = max_val
 # 		self.InitializeComponent()
@@ -120,6 +120,10 @@ uidoc = uiapp.ActiveUIDocument
 
 # 			# Add the controls to the form
 # 			self.Controls.Add(self.progressBar)
+			
+# 			# Keep the form on top
+# 			self.TopMost = True
+
 # 		except:
 # 			# Close the form
 # 			self.Close()
@@ -130,6 +134,16 @@ uidoc = uiapp.ActiveUIDocument
 # 			self.progressBar.Value = val
 # 			Application.DoEvents()  # Process events to update UI
 # 			if val >= self.max_val:
+# 				self.Close()
+# 		except:
+# 			#Close the form
+# 			self.Close()
+
+# 	def increment(self):
+# 		try:
+# 			self.progressBar.Value += 1
+# 			Application.DoEvents()  # Process events to update UI
+# 			if self.progressBar.Value >= self.max_val:
 # 				self.Close()
 # 		except:
 # 			#Close the form
